@@ -1,5 +1,6 @@
 import Matter from 'matter-js';
 import Fish from '../components/Fish.js';
+import Ground from '../components/Ground.js';
 
 export default restart => {
     let engine = Matter.Engine.create({ enableSleeping: false });
@@ -8,6 +9,7 @@ export default restart => {
 
     return {
         physics: { engine, world },
-        Fish: Fish(world, 'green', { x: 50, y: 400 }, { height: 30, width: 80 })
+        Fish: Fish(world, 'green', { x: 50, y: 400 }, { height: 30, width: 80 }),
+        Ground: Ground(world, 'light-brown', { x: 50, y: 400 }, { height: 30, width: 80 })
     };
 };
