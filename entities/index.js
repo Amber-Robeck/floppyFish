@@ -3,7 +3,7 @@ import Fish from '../components/Fish.js';
 
 export default restart => {
     let engine = Matter.Engine.create({ enableSleeping: false });
-    engine.gravity.y = 0.4;
+    engine.gravity.y = 0.1;
     let world = engine.world;
 
     return {
