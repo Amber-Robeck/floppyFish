@@ -11,9 +11,7 @@ const Ground = props => {
 
     return (
         <View style={{
-            borderWidth: 1,
             backgroundColor: color,
-            borderStyle: 'solid',
             position: 'absolute',
             left: xPos,
             top: yPos,
