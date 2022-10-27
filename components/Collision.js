@@ -29,7 +29,10 @@ export default (world, label, color, position, size) => {
         position.y,
         size.width,
         size.height,
-        { label }
+        {
+            label,
+            isStatic: true
+        }
     );
     Matter.World.add(world, startingCollision);
 
