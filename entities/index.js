@@ -1,6 +1,7 @@
 import Matter from 'matter-js';
 import Fish from '../components/Fish.js';
 import Ground from '../components/Ground.js';
+import Collision from '../components/Collision.js';
 import { Dimensions } from 'react-native';
 
 //Width and Height of window
@@ -15,6 +16,7 @@ export default restart => {
     return {
         physics: { engine, world },
         Fish: Fish(world, 'green', { x: 50, y: 400 }, { height: 30, width: 80 }),
-        Ground: Ground(world, 'brown', { x: wWidth / 2, y: wHeight }, { height: 30, width: wWidth })
+        Ground: Ground(world, 'brown', { x: wWidth / 2, y: wHeight }, { height: 30, width: wWidth }),
+        CollisionTop: Collision(world, 'CollisionTop', 'green', { x: 50, y: 400 }, { height: 30, width: 80 }),
     };
 };
